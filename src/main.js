@@ -4,16 +4,17 @@ import Vue from 'vue'
 import App from './App'
 import { METHODS } from 'http';
 import router from './router'
+import test from './components/test'
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
-// new Vue({
-//   el: '#app',
-//   router,
-//   components: { App },
-//   template: '<App/>',
-// })
+new Vue({
+  el: '#app',
+  router,
+  components: { App },
+  template: '<App/>',
+})
 
 
 //#####计算属性缓存对比方法 （computed 对比 methods）
@@ -153,18 +154,17 @@ Vue.config.productionTip = false
 // })
 
 // ############# class 与 style 绑定 #############
-var vue = new Vue({
-  el: '#app',
-  data: {
-    isActive: true,
-    error: null
-  },
-  computed: {
-    classObject: function () {
-      return {
-        active: this.isActive && !this.error,
-        'text-danger': this.error && this.error.type === 'fatal'
-      }
-    }
-  }
-})
+
+// Vue.component('Vuecom', {
+//   template: '<p class="foo baz">Hi</p>'
+// })
+
+// var vue = new Vue({
+//   el: '#app',
+//   data: {
+//     styleObject: {
+//       color: "red",
+//       fontSize: "50px"
+//     }
+//   }
+// })

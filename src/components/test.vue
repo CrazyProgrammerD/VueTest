@@ -1,15 +1,19 @@
 <template>
-    <div id="test" v-bind:class="classObject"></div>
+    <div>
+        <template v-if="loginType === 'username'">
+            <label>Username</label>
+            <input placeholder="Enter your Username" key="username-input">
+        </template>
+        <template v-else>
+            <label>Email</label>
+            <input placeholder="Enter your email address"  key="email-input">
+        </template>
+            <router-view/>
+    </div>
 </template>
 
 <script>
 export default {
-    el: '#test',
-    data: {
-        classObject: {
-            active: true,
-            'text-danger': false
-        }
-    }
+    name: 'test'
 }
 </script>
